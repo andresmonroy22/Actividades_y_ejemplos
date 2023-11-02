@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Semantica y selectores</title>
+    <style>
+        body{
+            background-color: lightblue;
+        }
+        li{
+            background-color: green;
+        }
+        article{
+            background-color: blueviolet;
+        }
+        div{
+            background-color: pink;
+        }
+        section{
+            background-color: yellow;
+        }
+        /* Para hacer seleccionar un ID se utiliza el # */
+        #contacto{
+            background-color: blue;
+        }
+        /* Para seleccionar una clase se utiliza el . */
+        .subtitulo{
+            color: red;
+        }
+        div .parrafoUno{
+            background-color: tomato;
+        }
+        div p{
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header esta predefinido para que guarde informacion principal del sitio como logo del sitio web, nombre, y menu de navegacion-->
+    <header>
+        <h1>Etiquetas semanticas y selectores HTML</h1>
+        <!-- Para los menus de navegación utilizo la etiqueta nav -->
+        <nav>
+            <!-- Se pueden agregar estilos dentro de la misma etiqueta -->
+            <ul style="background-color: red;">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#">Footer</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Dentro de main va todo el contenido principal de la pagina -->
+        <section id="inicio">
+            <!-- Section define una seccion del sitio web que cumple un proposito especifico -->
+            <h2 class="subtitulo">Inicio</h2>
+            <h3>Selectores</h3>
+            <div>
+                <h4>ID</h4>
+                <p class="parrafoUno">Es una identificación unica a mis elementos HTML. NO SE PUEDEN REPETIR EN TODO EL DOCUMENTO</p>
+                <h4>Clases</h4>
+                <p class="parrafoDos">No es unico, su caracteristica es que se pueden repetir en muchos elementos</p>
+            </div>
+        </section>
+        <section id="noticias">
+            <h2 class="subtitulo">Noticias</h2>
+            <article>
+                <h3>Titulo de la noticia</h3>
+                <!-- Un div es una etiqueta sin valor semantico -->
+                <div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit exercitationem sequi optio temporibus libero nesciunt! Cum veniam, magni culpa molestiae error dignissimos repellat a libero ea ullam recusandae vel dolores?</p>
+                    <img src="img/icono-regresar.png" alt="Icono de regresar">
+                </div>
+            </article>
+        </section>
+        <section id="contacto">
+            <div>
+                <h2 class="subtitulo">Contacto</h2>
+            </div>
+            <form action="">
+                <label for="">Nombre</label>
+                <input type="text"><br>
+                <label for="">Correo</label>
+                <input type="email">
+                <input type="submit">
+            </form>
+        </section>
+    </main>
+    <footer>
+        Todos los derechos reservados por el curso de backend 
+    </footer>
+</body>
+</html>
